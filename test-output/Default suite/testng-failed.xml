@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.TC001_LoginTest">
+      <class name="testCases.TC007_EmptySearchAlert">
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="login" invocation-numbers="0 1 2"/>
+          <include name="searchitem"/>
         </methods>
-      </class> <!-- testCases.TC001_LoginTest -->
+      </class> <!-- testCases.TC007_EmptySearchAlert -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

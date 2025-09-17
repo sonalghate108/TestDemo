@@ -12,6 +12,11 @@ public class LoginPage extends BasePage{
 		super(driver);
 	}
 
+	public String getPageTitle() {
+		String title = driver.getTitle();
+		return title;
+	}
+
 	@FindBy (css="a[href='/login']")
 	WebElement linkLogin;
 
@@ -67,13 +72,10 @@ public class LoginPage extends BasePage{
 	}
 
 	public void login(String username,String password) {
-		LoginPage lp = new LoginPage(driver);
-		lp.clickLoginLink();
 		System.out.println("Login Clicked");
-
-		lp.setUserName(username);
-		lp.setPassword(password);
-		lp.clickLoginButton();
+		setUserName(username);
+		setPassword(password);
+		clickLoginButton();
 	}
 
 	public void logout() {

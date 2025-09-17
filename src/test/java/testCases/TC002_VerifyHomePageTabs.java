@@ -12,6 +12,7 @@ public class TC002_VerifyHomePageTabs extends BaseClass{
 		logger.info("TestCase to verify HomePage tabs has started");
 		try {
 			HomePage hp = new HomePage(driver);
+			//Menu item can be verified with the similar text in the URL or with the Header 
 			//hp.verifyTopMenuwithURL();
 			hp.verifyTopMenuByHeader();
 			logger.info("TestCase to verify HomePage Tab has finished");

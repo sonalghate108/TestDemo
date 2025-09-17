@@ -28,12 +28,23 @@ public class DataProviders {
 //		}
 //		return logindata;//returning two dimension array
 //	}
+	
  @DataProvider(name="testDataLogin")
  public Object[][] logindata(){
 	 return new Object[][] {
 		 {"hello@yahoo.com","Password"},
 		 {"sonlkghate@gmail.com","Password12"},
 		 {"hi@hotmail.com","passwords"}
+	 };
+ }
+ 
+ @DataProvider(name="testDataSearchProduct")
+ public Object[][] searchproduct(){
+	 return new Object[][] {
+		 {"Fiction"},
+		 {"Health Book"},
+		 {"Healthcare Book"},
+		 {"Diamond Tennis Bracelet"}
 	 };
  }
 

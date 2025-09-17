@@ -16,10 +16,10 @@ public class TC001_LoginTest extends BaseClass{
 			logger.info("Test case to test login started");
 
 			LoginPage lp=new LoginPage(driver);
-			lp.logout();
 			lp.clickLoginLink();
 			lp.login(username, password);
-
+			
+			
 			if(lp.isLoginSuccessful()) {
 				Assert.assertTrue(true);
 			}
@@ -27,6 +27,7 @@ public class TC001_LoginTest extends BaseClass{
 				Assert.assertTrue(false);
 			}
 			logger.info("Test case to test login finished");
+			lp.logout();
 		}
 		catch(Exception e) {
 			System.out.println(e.toString());
