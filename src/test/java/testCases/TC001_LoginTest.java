@@ -14,12 +14,10 @@ public class TC001_LoginTest extends BaseClass{
 	public void login(String username, String password) {
 		try {
 			logger.info("Test case to test login started");
-
 			LoginPage lp=new LoginPage(driver);
 			lp.clickLoginLink();
 			lp.login(username, password);
-			
-			
+						
 			if(lp.isLoginSuccessful()) {
 				Assert.assertTrue(true);
 			}

@@ -7,7 +7,7 @@ import pageObjects.HomePage;
 
 
 public class TC002_VerifyHomePageTabs extends BaseClass{
-	@Test(priority=1,groups="Master")
+	@Test(priority=1,groups={"Master","Smoke"})
 	public void verifytopmenu(){
 		logger.info("TestCase to verify HomePage tabs has started");
 		try {

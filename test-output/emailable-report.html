@@ -8,16 +8,41 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">8</td><td class="num">0</td><td class="num attn">1</td><td class="num">125,224</td><td>Master</td><td></td></tr>
+<tr><th colspan="7">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">12,573</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testCases.TC003_VerifyFooterLinks</td><td><a href="#m0">verifyfooter</a></td><td rowspan="1">1758118670633</td><td rowspan="1">8337</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testCases.TC002_VerifyHomePageTabs</td><td><a href="#m1">verifytopmenu</a></td><td rowspan="1">1758118633709</td><td rowspan="1">6357</td></tr><tr class="passedodd"><td rowspan="4">testCases.TC004_SearchItem</td><td><a href="#m2">searchitem</a></td><td rowspan="4">1758118695851</td><td rowspan="4">3938</td></tr><tr class="passedodd"><td><a href="#m3">searchitem</a></td></tr><tr class="passedodd"><td><a href="#m4">searchitem</a></td></tr><tr class="passedodd"><td><a href="#m5">searchitem</a></td></tr><tr class="passedeven"><td rowspan="1">testCases.TC005_FilterProductByPrice</td><td><a href="#m6">filterproduct</a></td><td rowspan="1">1758118726369</td><td rowspan="1">1449</td></tr><tr class="passedodd"><td rowspan="1">testCases.TC006_SortProductByPriceLowToHigh</td><td><a href="#m7">filterproductlowtohigh</a></td><td rowspan="1">1758118734441</td><td rowspan="1">2641</td></tr><tr class="passedeven"><td rowspan="1">testCases.TC007_EmptySearchAlert</td><td><a href="#m8">verifyemptysearchalert</a></td><td rowspan="1">1758118739722</td><td rowspan="1">261</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">testCases.TC007_EmptySearchAlert</td><td><a href="#m0">tearDown</a></td><td rowspan="1">1758145114981</td><td rowspan="1">2</td></tr><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testCases.TC007_EmptySearchAlert</td><td><a href="#m1">verifyemptysearchalert</a></td><td rowspan="1">1758145114958</td><td rowspan="1">16</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">testCases.TC003_VerifyFooterLinks#verifyfooter</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
-	Twitter is broken with response code 403 expected [true] but found [false]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-	at pageObjects.HomePage.verifyLinkBroken(HomePage.java:73)
-	at testCases.TC003_VerifyFooterLinks.verifyfooter(TC003_VerifyFooterLinks.java:15)
+<h2>Default test</h2><h3 id="m0">testCases.TC007_EmptySearchAlert#tearDown</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;baseClass.BaseClass.driver&quot; is null
+	at baseClass.BaseClass.tearDown(BaseClass.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:214)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testCases.TC007_EmptySearchAlert#verifyemptysearchalert</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Exception occured
+	at org.testng.Assert.fail(Assert.java:96)
+	at testCases.TC007_EmptySearchAlert.verifyemptysearchalert(TC007_EmptySearchAlert.java:31)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -42,13 +67,5 @@
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testCases.TC002_VerifyHomePageTabs#verifytopmenu</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testCases.TC004_SearchItem#searchitem</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Fiction</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">testCases.TC004_SearchItem#searchitem</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Healthcare Book</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">testCases.TC004_SearchItem#searchitem</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Health Book</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">testCases.TC004_SearchItem#searchitem</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Diamond Tennis Bracelet</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">testCases.TC005_FilterProductByPrice#filterproduct</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">testCases.TC006_SortProductByPriceLowToHigh#filterproductlowtohigh</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">testCases.TC007_EmptySearchAlert#verifyemptysearchalert</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

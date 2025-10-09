@@ -44,6 +44,14 @@ public class HomePage extends BasePage{
 		return (footer.findElements(By.tagName("a")).size());
 	}
 
+	@FindBy (xpath = "//div[@class='page-title']/h1")
+	WebElement headerTopMenu;
+
+	private String getTopMenuHeader() {
+		return headerTopMenu.getText();
+	}
+	
+	
 	public void verifyLinkBroken() {
 		//open links in different window and print title
 		//		for(int i=0;i<numberofLinks();i++) {
@@ -110,12 +118,7 @@ public class HomePage extends BasePage{
 		return firstword;
 	}
 
-	@FindBy (xpath = "//div[@class='page-title']/h1")
-	WebElement headerTopMenu;
 
-	public String getTopMenuHeader() {
-		return headerTopMenu.getText();
-	}
 
 	public void verifyTopMenuByHeader() {
 		SoftAssert a = new SoftAssert();
@@ -161,7 +164,7 @@ public class HomePage extends BasePage{
 	@FindBy (className="product-name")
 	WebElement txtProductName;
 
-	public String getProductName() {
+	private String getProductName() {
 		return txtProductName.getText();
 	}
 
@@ -175,11 +178,8 @@ public class HomePage extends BasePage{
 		return listdropdown;
 	}
 
-	public boolean isSortingSuggestionListDisplayed() throws InterruptedException {
-		Thread.sleep(2000);
-		//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		//		wait.until(ExpectedConditions.visibilityOfAllElements(listSuggestions));
-
+	public boolean isSortingSuggestionListDisplayed() {
+	
 		if(listdropdown.isDisplayed()) {
 			return true;
 		}
@@ -190,7 +190,7 @@ public class HomePage extends BasePage{
 	//Find Item from Auto Suggested drop down and click. 
 	public boolean isProductFound(String productname) throws InterruptedException{
 
-		Thread.sleep(2000);
+		
 		if(listdropdown.isDisplayed()) {
 
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));

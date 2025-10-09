@@ -41,22 +41,24 @@ public class BaseClass {
 		logger= LogManager.getLogger(getClass());
 		System.setProperty("WebDriver.chrome.driver",System.getProperty("user.dir")+"//Drivers//chromedriver.exe");
 		driver = new ChromeDriver();
+		
+		
 		ChromeOptions handlingSSL = new ChromeOptions();
 		handlingSSL.setAcceptInsecureCerts(true);
 		driver.get(properties.getProperty("appURL"));
 		driver.manage().window().maximize();
 		LoginPage lp = new LoginPage(driver);
-		//lp.login(properties.getProperty("username"), properties.getProperty("password"));
+		lp.login(properties.getProperty("username"), properties.getProperty("password"));
 		HomePage hp = new HomePage(driver);
-		//Assert.assertEquals(hp.getWelcomeText(),"Welcome to our store");
+		Assert.assertEquals(hp.getWelcomeText(),"Welcome to our store");
 		logger.info("Title Validated Successfully.");
 	}
 
 	@AfterClass(groups="Master", alwaysRun = true)
 	public void tearDown() throws InterruptedException {
 		LoginPage lp = new LoginPage(driver);
-		//lp.clickLogoutLink();
-	//	lp.logout();
+		lp.clickLogoutLink();
+		lp.logout();
 		driver.quit();
 	}
 	

@@ -20,11 +20,11 @@ public class TC005_FilterProductByPrice extends BaseClass{
 			pp.clickBooksMenu();
 			pp.clickUnder25();
 			if(pp.ispricemorethan25()) {
-				logger.info("All the products have price more than 25");
+				logger.info("All the products have prices more than 25");
 				Assert.assertTrue(true);
 			}
 			else {
-				logger.info("All the products DO Not have price more than 25");
+				logger.info("All the products DO Not have prices more than 25");
 				Assert.assertTrue(false);
 			}
 			

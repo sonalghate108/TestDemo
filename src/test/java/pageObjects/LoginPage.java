@@ -72,7 +72,6 @@ public class LoginPage extends BasePage{
 	}
 
 	public void login(String username,String password) {
-		System.out.println("Login Clicked");
 		setUserName(username);
 		setPassword(password);
 		clickLoginButton();

@@ -13,7 +13,6 @@ public class ProductPage extends BasePage{
 
 	public ProductPage(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
 
 	@FindBy (xpath = "//ul[@class='top-menu']/li[1]")
@@ -41,12 +40,10 @@ public class ProductPage extends BasePage{
 		for(int i=0;i<originalpricelist.size();i++) {
 			Double k= Double.valueOf(originalpricelist.get(i).getText());
 			if(k>25) {
-				System.out.println(k);
 				return false;
 			}
 			else 
 			{
-				System.out.println(k);
 				return true;
 			}
 		}
@@ -59,7 +56,6 @@ public class ProductPage extends BasePage{
 
 		for(int i=0;i<originalpricelist.size();i++ ) {
 			Double k= Double.valueOf(originalpricelist.get(i).getText());
-			System.out.println(k);
 			sortedprice.add(k);
 		}
 		Collections.sort(sortedprice);
@@ -75,7 +71,6 @@ public class ProductPage extends BasePage{
 		ArrayList<Double> sortedpriceresult = new ArrayList<Double>();
 		for(int i=0;i<originalpricelist.size();i++ ) {
 			Double k= Double.valueOf(originalpricelist.get(i).getText());
-			System.out.println(k);
 			sortedpriceresult.add(k);
 		}
 		return sortedpriceresult;
@@ -83,7 +78,6 @@ public class ProductPage extends BasePage{
 
 	public boolean isBookPriceSorted() {
 		if(sortedpricelist().equals(sortedpricelistresult())) {
-			System.out.println("true");
 			return true;
 		}
 		return false;
@@ -99,6 +93,5 @@ public class ProductPage extends BasePage{
 
 	public void setSelectSortBy() throws InterruptedException {
 		getSelectSortBy().selectByIndex(3);
-		System.out.println("Selected Design type");
 	}
 }

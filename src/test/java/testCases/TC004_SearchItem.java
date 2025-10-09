@@ -8,7 +8,7 @@ import utilities.DataProviders;
 public class TC004_SearchItem extends BaseClass{
 
 	//Test case will look for items according to data provider. 
-	@Test(priority=1,groups="Master",dataProvider="testDataSearchProduct", dataProviderClass=DataProviders.class)
+	@Test(priority=1,groups={"Master","Smoke"},dataProvider="testDataSearchProduct", dataProviderClass=DataProviders.class)
 	public void searchitem(String productname){
 		logger.info("TestCase to Search product started");
 		try {

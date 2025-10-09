@@ -420,3 +420,5 @@
 2025-09-17 15:18:59 INFO  TC007_EmptySearchAlert:12 - TestCase to verify alert started
 2025-09-17 15:18:59 INFO  TC007_EmptySearchAlert:18 - Alert is accepted
 2025-09-17 15:18:59 INFO  TC007_EmptySearchAlert:27 - TestCase to verify alert finished
+2025-09-17 22:38:34 INFO  TC007_EmptySearchAlert:54 - Title Validated Successfully.
+2025-09-17 22:38:34 INFO  TC007_EmptySearchAlert:12 - TestCase to verify alert started

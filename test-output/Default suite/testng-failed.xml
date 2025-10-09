@@ -6,8 +6,8 @@
       <class name="testCases.TC007_EmptySearchAlert">
         <methods>
           <include name="setup"/>
+          <include name="verifyemptysearchalert"/>
           <include name="tearDown"/>
-          <include name="searchitem"/>
         </methods>
       </class> <!-- testCases.TC007_EmptySearchAlert -->
     </classes>
