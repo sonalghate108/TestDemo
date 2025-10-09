@@ -78,7 +78,7 @@ public class LoginPage extends BasePage{
 	}
 
 	public void logout() {
-		if(isLogoutAvailable()==true) {
+		if(isLogoutAvailable()) {
 			clickLogoutLink();
 		}
 	}
@@ -95,11 +95,10 @@ public class LoginPage extends BasePage{
 	}
 
 	public boolean isLoginSuccessful() {
-		if(isLogoutAvailable()==true) {
+		if(isLogoutAvailable()) {
 			return true;
 		}
 		if(getErrorMessage().equalsIgnoreCase("The credentials provided are incorrect")) {
-
 			clickLoginLink();
 			return false;
 		}
